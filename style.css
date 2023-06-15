@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  transition: .5s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f2f2f2;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --violet: #5964e0;
+  --light-gray: #f4f6f8;
+  --gray: #9daec2
+}
+
+main {
+  background-color: #f2f2f2;
+  height: fit-content;
+}
+
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 45px 165px;
+  background-color: var(--violet);
+  width: 100vw;
+  height: 160px;
+  border-bottom-left-radius: 100px;
+}
+
+header .logo {
+  width: 115px;
+  height: 32px;
+}
+
+.thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.thumb .track {
+  width: 48px;
+  height: fit-content;
+  padding: 5px;
+  left: 1199px;
+  top: 45px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.thumb .track .dot {
+  width: 14px;
+  height: 14px;
+  background: var(--violet);
+  border-radius: 100%;
+  float: left;
+}
+
+button {
+  position: relative;
+  background: var(--violet);
+  border-radius: 5px;
+  font-family: sans-serif;
+  padding: 16px 35px;
+  border: none;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 3px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: var(--light-gray);
+  border-radius: 3px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input~.checkmark {
+  background: var(--gray);
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked~.checkmark {
+  background-color: var(--violet);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 28px 32px;
+  border-right: 1px #6E8098 solid;
+}
+
+.col:nth-last-child(1) {
+  border-left: 0px transparent solid;
+}
+
+.col input {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 100%;
+}
+
+.filter_container {
+  position: absolute;
+  top: 15%;
+  left: 165px;
+  right: 165px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  border-radius: 3px;
+}
+
+.card_box {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 145px;
+  padding: 0 165px;
+  gap: 15px;
+  margin-bottom: 100px;
+}
+
+.card_box .content h1 {
+  /* font-family: 'Kumbh Sans'; */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+
+  color: #19202D;
+}
+
+.card {
+  position: relative;
+  width: 350px;
+  padding-top: 25px;
+  /* background-color: red; */
+}
+
+.main_cont {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  background: #FFFFFF;
+  border-radius: 6px;
+  width: 100%;
+  height: fit-content;
+  padding: 32px 40px;
+}
+
+.main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header_bottom {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+  color: #6E8098;
+}
+
+.footer {
+  margin-top: 44px;
+}
+
+.type {
+  color: #6E8098;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 32px;
+}
+
+.header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+}
+
+.footer {
+  color: #5964E0;
+}
+
+.thumb .track .swactive {
+  float: right;
+}
+
+.cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+button:hover {
+  letter-spacing: 5px;
+}

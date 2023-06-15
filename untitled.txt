@@ -1,0 +1,21 @@
+<div class="card">
+        <div class="header">
+          <img src="${elem.logo}" alt="">
+        </div>
+        <div class="main_cont">
+          <div class="main">
+            <div class="header_bottom">
+              <p class="ago">${elem.whenPlaced}</p>●<p class="tme">${elem.workTime}</p>
+            </div>
+              <div class="content" style="color:#19202D">
+                <h1>${elem.title}</h1>
+              </div>
+            <div class="type">${elem.companyName}</div>
+           </div>
+          <div class="footer">
+            <div class="location">${elem.companyCountry}</div>
+          </div>
+        </div>
+      </div> 
+
+https://db-json-one.vercel.app/db.json
